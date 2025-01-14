@@ -1,0 +1,145 @@
+/* General page styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #c9d6ff;
+  background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.signin-page {
+  width: 100%;
+  max-width: 900px;
+}
+
+.signin-container {
+  display: flex;
+  width: 768px;
+  height: 456px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  gap: 2rem;
+}
+
+/* Left Section */
+.signin-left {
+  flex: 1;
+  padding: 2rem;
+  text-align: center;
+  background: #fff;
+}
+
+.signin-left h2 {
+  font-size: 1.8rem;
+  margin-top: 3rem;
+}
+
+.social-login {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.social-btn {
+  width: 40px;
+  height: 40px;
+  background: #ddd;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+  background: #4a90e2;
+  color: #fff;
+}
+
+.input-field {
+  background-color: #eee;
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.forgot-password {
+  font-size: 0.9rem;
+  color: #4a90e2;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+}
+
+.signin-btn {
+  padding: 0.8rem 2rem;
+  background: #4a90e2;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.signin-btn:hover {
+  background: #3a7bd5;
+}
+
+/* Right Section */
+.signin-right {
+  flex: 1;
+  padding: 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, #4a90e2, #9013fe);
+  border-radius: 150px 0 0 100px;
+  color: #fff;
+}
+
+.signin-right h2 {
+  font-size: 1.8rem;
+  margin-top: 6rem;
+}
+
+.signin-right p {
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.signup-btn {
+  padding: 0.8rem 2rem;
+  border: 2px solid #fff;
+  background: none;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.signup-btn:hover {
+  background: #fff;
+  color: #4a90e2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .signin-container {
+    flex-direction: column;
+  }
+
+  .signin-left,
+  .signin-right {
+    padding: 1.5rem;
+  }
+}
