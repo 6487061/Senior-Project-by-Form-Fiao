@@ -1,8 +1,14 @@
-// views/SignIn.jsx
-import React, { useState } from 'react';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../css/signin.css';
 
 const SignIn = () => {
+  const navigate = useNavigate();
+
+  const handleSignUpClick = () => {
+    navigate('/signup'); // นำทางไปยังหน้า Sign Up
+  };
+
   return (
     <div className="signin-page">
       <div className="signin-container">
@@ -10,19 +16,19 @@ const SignIn = () => {
         <div className="signin-left">
           <h2>Sign In</h2>
           <form>
-            <input type="email" placeholder="Email" className="input-field" />
-            <input type="password" placeholder="Password" className="input-field" />
-            <p className="forgot-password">Forgot Your Password?</p>
-            <button type="submit" className="signin-btn">Sign In</button>
+            <input type="email" placeholder="Email" className="signin-input-field" />
+            <input type="password" placeholder="Password" className="signin-input-field" />
+            <p className="signin-forgot-password">Forgot Your Password?</p>
+            <button type="submit" className="signin-left-btn">Sign In</button>
           </form>
         </div>
         {/* Right Section */}
         <div className="signin-right">
           <h2>Hello, Friend!</h2>
-          <p>
-            Register with your personal details to use all of site features
-          </p>
-          <button className="signup-btn">Sign Up</button>
+          <p>Register with your personal details to use all of site features</p>
+          <button className="signup-right-btn" onClick={handleSignUpClick}>
+            Sign Up
+          </button>
         </div>
       </div>
     </div>

@@ -41,30 +41,7 @@ body {
   margin-top: 3rem;
 }
 
-.social-login {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-.social-btn {
-  width: 40px;
-  height: 40px;
-  background: #ddd;
-  border: none;
-  border-radius: 50%;
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.social-btn:hover {
-  background: #4a90e2;
-  color: #fff;
-}
-
-.input-field {
+.signin-input-field {
   background-color: #eee;
   width: 100%;
   padding: 0.8rem;
@@ -74,14 +51,14 @@ body {
   font-size: 1rem;
 }
 
-.forgot-password {
+.signin-forgot-password {
   font-size: 0.9rem;
   color: #4a90e2;
   margin-bottom: 1.5rem;
   cursor: pointer;
 }
 
-.signin-btn {
+.signin-left-btn {
   padding: 0.8rem 2rem;
   background: #4a90e2;
   border: none;
@@ -101,7 +78,7 @@ body {
   flex: 1;
   padding: 2rem;
   text-align: center;
-  background: linear-gradient(135deg, #4a90e2, #9013fe);
+  background: linear-gradient(135deg, #4a90e2, #3a7bd5);
   border-radius: 150px 0 0 100px;
   color: #fff;
 }
@@ -116,7 +93,7 @@ body {
   font-size: 1rem;
 }
 
-.signup-btn {
+.signin-right-btn {
   padding: 0.8rem 2rem;
   border: 2px solid #fff;
   background: none;
@@ -127,7 +104,7 @@ body {
   transition: all 0.3s ease;
 }
 
-.signup-btn:hover {
+.signin-right-btn:hover {
   background: #fff;
   color: #4a90e2;
 }

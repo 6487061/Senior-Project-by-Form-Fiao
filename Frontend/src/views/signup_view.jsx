@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../css/signup.css';
 
-const SignUp = ({ onSignUp, errors }) => {
+const SignUp = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({ name: '', email: '', password: '' });
 
   const handleChange = (e) => {
@@ -10,21 +12,25 @@ const SignUp = ({ onSignUp, errors }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSignUp(formData);
+    console.log(formData); // จัดการข้อมูลสมัครสมาชิก
+  };
+
+  const handleSignInClick = () => {
+    navigate('/'); // นำทางกลับไปหน้า Sign In
   };
 
   return (
-    <div className="signin-page">
-      <div className="signin-container">
+    <div className="signup-page">
+      <div className="signup-container">
         {/* Left Section */}
-        <div className="signin-left">
+        <div className="signup-left">
           <h2>Sign Up</h2>
           <form onSubmit={handleSubmit}>
             <input
               type="text"
               name="name"
               placeholder="Name"
-              className="input-field"
+              className="signup-input-field"
               value={formData.name}
               onChange={handleChange}
             />
@@ -32,7 +38,7 @@ const SignUp = ({ onSignUp, errors }) => {
               type="email"
               name="email"
               placeholder="Email"
-              className="input-field"
+              className="signup-input-field"
               value={formData.email}
               onChange={handleChange}
             />
@@ -40,25 +46,20 @@ const SignUp = ({ onSignUp, errors }) => {
               type="password"
               name="password"
               placeholder="Password"
-              className="input-field"
+              className="signup-input-field"
               value={formData.password}
               onChange={handleChange}
             />
-            {errors.length > 0 && (
-              <ul className="error-list">
-                {errors.map((error, index) => (
-                  <li key={index} className="error-item">{error}</li>
-                ))}
-              </ul>
-            )}
-            <button type="submit" className="signin-btn">Sign Up</button>
+            <button type="submit" className="signup-left-btn">Sign Up</button>
           </form>
         </div>
         {/* Right Section */}
-        <div className="signin-right">
+        <div className="signup-right">
           <h2>Welcome Back!</h2>
           <p>To keep connected with us, please login with your personal info</p>
-          <button className="signup-btn">Sign In</button>
+          <button className="signup-right-btn" onClick={handleSignInClick}>
+            Sign In
+          </button>
         </div>
       </div>
     </div>

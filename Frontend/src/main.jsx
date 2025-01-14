@@ -7,6 +7,6 @@ import Signup from './views/signup_view'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Signin />
+    <App />
   </StrictMode>,
 )
